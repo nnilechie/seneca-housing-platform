@@ -1,0 +1,42 @@
+# WordPress core files to ignore
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/plugins
+wp-content/backup*/
+wp-content/cache/
+wp-content/cache/supercache/
+
+
+# WordPress debugging logs
+*.log
+error_log
+
+# WordPress default themes (optional)
+wp-content/themes/twenty*/
+
+# Plugin and theme dependencies
+node_modules/
+vendor/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+*~
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
