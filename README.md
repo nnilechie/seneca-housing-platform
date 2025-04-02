@@ -6,7 +6,7 @@ A secure housing application connecting international students and professionals
 
 We are **TEAM X**, a group of six students at Seneca College, and this is our final project for [Your Course/Program Name]: the **Seneca Housing Platform**. As a team, we set out to address a challenge that hits close to home for many of us—housing struggles for international students and expatriate professionals in Ontario. We’ve seen friends and classmates face the frustration of finding a place to live without a local credit history or references, while landlords hesitate to rent without reliable verification. Our platform bridges that gap with **document validation**, **credit assessment**, and **rental mediation services**, creating a trusted ecosystem where newcomers can find housing and property owners feel secure.
 
-This project isn’t just about meeting a school requirement for us—it’s about making a real difference in Ontario’s housing landscape, one tenant and landlord at a time.
+This project isn’t just about meeting a school requirement for us, it’s about making a real difference in Ontario’s housing landscape, one tenant and landlord at a time.
 
 ---
 
@@ -39,10 +39,12 @@ Our goal is to build trust—helping tenants find a home and landlords feel secu
 ---
 
 ## How It’s Built
-We built this platform as a WordPress child theme for the Houzez real estate theme, combining our skills to create a seamless experience. Here’s the tech stack we used:
+We built this platform as a custom theme on WordPress leveraging on the Houzez real estate theme, combining our skills to create a seamless experience. Here’s the tech stack we used:
 - **WordPress & PHP**: For custom templates and functions that power the platform.
-- **Shortcodes**: Like `[raf_applicant_dashboard]` to display rental application data.
-- **JavaScript & jQuery**: For dynamic features, such as AJAX loading in the dashboard (still in progress).
+- **MySQL Database**: For database management, handling all users and site informations 
+- **Custom Plugins**: For handling all PHP dependencies and API management like 'Seneca Housing Dependencies'
+- **Shortcodes and Widgets**: Like 'rental applicant dashboard' 'WPforms' to display rental application data and custom forms.
+- **JavaScript & jQuery**: For dynamic features, such as AJAX loading in the dashboard and other sections of the platform(still in progress).
 - **CSS**: To ensure a clean and consistent look across the platform.
 
 It took a lot of teamwork and late nights, but we learned so much about integrating custom features into an existing framework.
