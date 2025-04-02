@@ -1,12 +1,15 @@
 # seneca-housing-platform
 A secure housing application connecting international students and professionals with Ontario landlords. Features document validation, alternative credit scoring, and rental guarantees, eliminating barriers for tenants while providing security for property owners.
 
+---
 
 # Seneca Housing Platform
 
-We are **TEAM X**, a group of six students at Seneca College, and this is our final project for [Your Course/Program Name]: the **Seneca Housing Platform**. As a team, we set out to address a challenge that hits close to home for many of us—housing struggles for international students and expatriate professionals in Ontario. We’ve seen friends and classmates face the frustration of finding a place to live without a local credit history or references, while landlords hesitate to rent without reliable verification. Our platform bridges that gap with **document validation**, **credit assessment**, and **rental mediation services**, creating a trusted ecosystem where newcomers can find housing and property owners feel secure.
+We are **TEAM X**, a group of six students at **Seneca College**, and this is our final project for the **Business Information Technology** program, specifically the **Programming Project (PRG800)** course. Our goal is to address a real-world issue: the housing challenges that international students and expatriate professionals face in Ontario.
 
-This project isn’t just about meeting a school requirement for us, it’s about making a real difference in Ontario’s housing landscape, one tenant and landlord at a time.
+Many newcomers struggle to secure rentals due to the lack of local credit history and references. At the same time, landlords hesitate to rent without reliable verification. Our platform bridges this gap through **document validation**, **credit assessment**, and **rental mediation services**, fostering a trusted ecosystem where tenants can find housing and property owners feel secure.
+
+This project isn’t just about meeting academic requirements—it’s about making a real difference in Ontario’s housing landscape.
 
 ---
 
@@ -14,7 +17,7 @@ This project isn’t just about meeting a school requirement for us, it’s abou
 - [Why We Built This](#why-we-built-this)
 - [What It Does](#what-it-does)
 - [How It’s Built](#how-its-built)
-- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
 - [How to Use It](#how-to-use-it)
 - [Challenges We Faced](#challenges-we-faced)
 - [What’s Next](#whats-next)
@@ -23,90 +26,101 @@ This project isn’t just about meeting a school requirement for us, it’s abou
 ---
 
 ## Why We Built This
-As students at Seneca, we’ve heard too many stories of international students struggling to find housing in Ontario. No credit history, no local references—just a lot of rejection. At the same time, landlords face risks renting to tenants they can’t easily verify. As **TEAM X**, we wanted to tackle this problem head-on. The Seneca Housing Platform **democratizes housing access** for newcomers in Canada while **protecting property owners** with advanced verification systems and financial guarantees. It’s a cause we’re passionate about because we believe everyone deserves a fair chance at a home, no matter where they’re from.
+As Seneca students, we’ve heard too many stories of international students struggling to find housing in Ontario. No credit history, no local references—just rejection. Meanwhile, landlords face risks renting to tenants they can’t verify. Our platform **democratizes housing access** for newcomers while **protecting property owners** through advanced verification systems and financial guarantees.
 
 ---
 
 ## What It Does
 Here’s how the Seneca Housing Platform helps:
-- **Document Validation**: Verifies tenant information to ensure it’s legitimate, giving landlords confidence.
-- **Credit Assessment**: Evaluates credit for international tenants who lack a Canadian credit history, using custom tools.
-- **Rental Mediation Services**: Facilitates communication and agreements between tenants and landlords.
-- **Financial Guarantees**: Provides landlords with a safety net, like financial backing, when renting to newcomers.
+- **Document Validation**: Verifies tenant information to ensure legitimacy.
+- **Credit Assessment**: Evaluates international tenants who lack a Canadian credit history.
+- **Rental Mediation Services**: Facilitates communication between tenants and landlords.
+- **Financial Guarantees**: Offers landlords a safety net when renting to newcomers.
 
-Our goal is to build trust—helping tenants find a home and landlords feel secure in the process.
+Our goal is to build trust—helping tenants find a home while giving landlords the confidence to rent to them.
 
 ---
 
 ## How It’s Built
-We built this platform as a custom theme on WordPress leveraging on the Houzez real estate theme, combining our skills to create a seamless experience. Here’s the tech stack we used:
-- **WordPress & PHP**: For custom templates and functions that power the platform.
-- **MySQL Database**: For database management, handling all users and site informations 
-- **Custom Plugins**: For handling all PHP dependencies and API management like 'Seneca Housing Dependencies'
-- **Shortcodes and Widgets**: Like 'rental applicant dashboard' 'WPforms' to display rental application data and custom forms.
-- **JavaScript & jQuery**: For dynamic features, such as AJAX loading in the dashboard and other sections of the platform(still in progress).
-- **CSS**: To ensure a clean and consistent look across the platform.
-
-It took a lot of teamwork and late nights, but we learned so much about integrating custom features into an existing framework.
+Our platform is built using a customized **WordPress** setup, leveraging the **Houzez real estate theme**. Our tech stack includes:
+- **WordPress & PHP**: Custom templates and functions that power the platform.
+- **MySQL Database**: Manages user and rental application data.
+- **Custom Plugins**: Handles core functionalities like 'Seneca Housing Dependencies'.
+- **Shortcodes & Widgets**: Implements elements like the 'Rental Applicant Dashboard' via `[raf_applicant_dashboard]`.
+- **JavaScript & jQuery**: Adds dynamic features, such as AJAX-powered content updates.
+- **CSS**: Ensures a clean and consistent UI across the platform.
 
 ---
 
-## Getting Started
-Ready to check it out? Here’s how to set up the Seneca Housing Platform:
-1. **Clone or Download the Repository**:
-   ```bash
-   git clone https://github.com/your-username/seneca-housing-platform.git
-   ```
-   Or download the ZIP file and extract it.
-
-2. **Add to WordPress**:
-   - Copy the `houzez-child` folder to `wp-content/themes/` in your WordPress installation.
-
-3. **Activate the Child Theme**:
-   - Go to `Appearance > Themes` in the WordPress admin dashboard and activate "Houzez Child."
-
-4. **Set Up the Page**:
-   - Ensure there’s a page titled "User Dashboard Rental Applications" with the slug `user-dashboard-rental-applications` and the `[raf_applicant_dashboard]` shortcode.
-
-5. **Enable Debugging (Optional)**:
-   - Add this to `wp-config.php` to capture logs:
-     ```php
-     define('WP_DEBUG', true);
-     define('WP_DEBUG_LOG', true);
-     define('WP_DEBUG_DISPLAY', false);
-     ```
+## Project Structure
+Here's a breakdown of key folders in this repository:
+```
+/seneca-housing-platform
+│── wordpress/themes/houzez-child       # Custom child theme for Houzez
+│── wordpress/plugins/                  # Custom plugins handling core functionalities
+│── wordpress/wp-content/uploads        # Stores uploaded rental documents
+│── /sql                                # Database initialization scripts
+│── /membership                         # Handles landlord membership & premium features
+│── /templates                          # Custom template overrides for theme customization
+│── /assets                             # Stores CSS, JS, and images for UI improvements
+└── README.md                          # Project documentation
+```
+This structure ensures modularity, making it easier to extend the project.
 
 ---
 
 ## How to Use It
-- **For Tenants**: Log in, head to your dashboard, and click "Rental Applications" to submit or view your applications. The platform validates your documents and assesses your credit.
-- **For Landlords**: Log in, review tenant applications, communicate with applicants, and manage agreements—all from the dashboard.
+- **For Tenants**:
+  1. **Create an account** and log in.
+  2. **Search for properties** based on preferences and budget.
+  3. **Apply for a property**, submit rental applications, and upload documents.
+  4. **Make necessary payments** for rent, deposit, or services.
+  5. **Sign rental contracts** digitally within the platform.
+  6. **Communicate with landlords or agents** via the built-in messaging system.
 
-If something doesn’t work as expected, check the `wp-content/debug.log` or open your browser’s console (F12) for error messages.
+- **For Landlords**:
+  1. **Create an account** and log in.
+  2. **List properties**, including descriptions, images, and rental conditions.
+  3. **Review tenant applications** and verify submitted documents.
+  4. **Approve or reject applications** based on tenant background checks.
+  5. **Communicate with potential tenants** for further clarifications.
+  6. **Manage rental agreements** and ensure digital contract signing.
+  7. **Subscribe to a membership plan** for enhanced listing features and priority placements.
+
+- **Debugging**:
+  - If issues arise, check `wp-content/debug.log` or use browser developer tools (F12).
 
 ---
 
 ## Challenges We Faced
-As a team of six, we ran into our fair share of hurdles. One of the biggest was getting the "Rental Applications" menu item to appear consistently across all dashboard pages. Houzez’s JavaScript kept re-rendering the menu, which made our custom item disappear on some pages. We added a JavaScript fallback to force it back, but it’s still not perfect. Another challenge was implementing AJAX loading for the dashboard content—Houzez’s AJAX system is tricky, and we’re still working on getting it right. It was a lot of trial and error, but we learned so much about teamwork and problem-solving along the way.
+- **Menu Visibility Issue**: The "Rental Applications" menu item sometimes disappears due to the Houzez AJAX-based rendering system. We implemented a JavaScript workaround but are still refining it.
+- **AJAX Loading**: Making the dashboard dynamic without breaking WordPress hooks proved challenging, especially when integrating it with Houzez’s existing AJAX framework.
+- **Custom Credit Scoring**: Implementing a fair, data-driven alternative credit assessment model remains an ongoing challenge.
+- **Membership System**: Designing a flexible subscription model for landlords that allows tiered access to platform features.
 
 ---
 
 ## What’s Next
-We’re proud of what we’ve built, but there’s more we want to do:
-- **Smarter Credit Assessment**: Develop better tools to evaluate international tenants’ credit.
-- **External APIs**: Integrate with document verification services for faster processing.
-- **Enhanced Guarantees**: Offer options like rental insurance for landlords.
-- **Fix AJAX Loading**: Make the dashboard fully dynamic, so content loads smoothly without page refreshes.
-- **Role-Based Access**: Add restrictions so only certain users (e.g., tenants or landlords) see specific features.
-
-This project is just the beginning—we’d love to see it grow into a real solution for Ontario’s housing challenges.
+We plan to improve the platform with:
+- **Smarter Credit Assessment**: A more robust scoring model for international tenants.
+- **External API Integrations**: Faster verification through document validation services.
+- **Better Financial Guarantees**: Rental insurance or deposit alternatives.
+- **Role-Based Access**: Restricting certain features based on user type (tenant, landlord, admin).
+- **Optimized Membership Tiers**: Offering different levels of features based on landlord subscriptions.
 
 ---
 
 ## Let’s Collaborate
-This was our final project at Seneca, but we’d love for the Seneca Housing Platform to keep evolving. If you have ideas or want to contribute, fork the repo, make your changes, and send us a pull request. Let’s work together to make housing in Ontario more inclusive for everyone!
+This project doesn’t have to end with our course! We welcome contributions:
+- **Fork the repository** and make improvements.
+- **Submit a pull request** with fixes or new features.
+- **Check the GitHub Issues page** for open tasks.
+
+[GitHub Repo](https://github.com/your-username/seneca-housing-platform)  
+Let’s make housing in Ontario more inclusive together!
 
 ---
 
-### A Final Thought from TEAM X
-Building the Seneca Housing Platform was more than a school assignment for us—it’s about solving a problem we’ve seen too many people face. As a team, we poured our hearts into creating a tool that helps international students and expatriates find a home in Ontario, while giving landlords the trust they need to say yes. We hope this project is a small step toward a more welcoming housing market for newcomers. Thanks for checking out our work!
+### **Final Thoughts from TEAM X**
+Building the Seneca Housing Platform was more than an assignment—it was about solving a real issue that international students and expatriates face. We poured our hearts into this project, and we hope it contributes to a more accessible housing market in Ontario. Thanks for checking out our work!
+
