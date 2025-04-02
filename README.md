@@ -56,14 +56,12 @@ Our platform is built using a customized **WordPress** setup, leveraging the **H
 Here's a breakdown of key folders in this repository:
 ```
 /seneca-housing-platform
-│── wordpress/themes/houzez-child       # Custom child theme for Houzez
-│── wordpress/plugins/                  # Custom plugins handling core functionalities
-│── wordpress/wp-content/uploads        # Stores uploaded rental documents
-│── /sql                                # Database initialization scripts
-│── /membership                         # Handles landlord membership & premium features
-│── /templates                          # Custom template overrides for theme customization
-│── /assets                             # Stores CSS, JS, and images for UI improvements
-└── README.md                          # Project documentation
+│── wordpress/themes/houzez-child            # Custom child theme for Houzez
+│── wordpress/themes/houzez-child/template   # Custom template overrides for theme customization
+│── wordpress/plugins/                       # Custom plugins handling core functionalities
+│── wordpress/wp-includes/assets             # Stores CSS, JS, and images for UI improvements
+│── /wordpress/wpconfig.php                  # The base configuration for WordPress and Database initialization scripts 
+└── README.md                                # Project documentation
 ```
 This structure ensures modularity, making it easier to extend the project.
 
@@ -93,8 +91,8 @@ This structure ensures modularity, making it easier to extend the project.
 ---
 
 ## Challenges We Faced
-- **Menu Visibility Issue**: The "Rental Applications" menu item sometimes disappears due to the Houzez AJAX-based rendering system. We implemented a JavaScript workaround but are still refining it.
-- **AJAX Loading**: Making the dashboard dynamic without breaking WordPress hooks proved challenging, especially when integrating it with Houzez’s existing AJAX framework.
+- **Menu Visibility Issue**: The "Rental Applications" menu item sometimes disappears due to Javascript conflicts with AJAX-based rendering system. We implemented a JavaScript workaround but are still refining it.
+- **AJAX Loading**: Making the dashboard dynamic without breaking WordPress hooks proved challenging, especially when integrating it with defauolt theme AJAX framework.
 - **Custom Credit Scoring**: Implementing a fair, data-driven alternative credit assessment model remains an ongoing challenge.
 - **Membership System**: Designing a flexible subscription model for landlords that allows tiered access to platform features.
 
@@ -110,17 +108,12 @@ We plan to improve the platform with:
 
 ---
 
-## Let’s Collaborate
-This project doesn’t have to end with our course! We welcome contributions:
-- **Fork the repository** and make improvements.
-- **Submit a pull request** with fixes or new features.
-- **Check the GitHub Issues page** for open tasks.
+[GitHub Repo](https://github.com/nnilechie/seneca-housing-platform)  
 
-[GitHub Repo](https://github.com/your-username/seneca-housing-platform)  
 Let’s make housing in Ontario more inclusive together!
 
 ---
 
 ### **Final Thoughts from TEAM X**
-Building the Seneca Housing Platform was more than an assignment—it was about solving a real issue that international students and expatriates face. We poured our hearts into this project, and we hope it contributes to a more accessible housing market in Ontario. Thanks for checking out our work!
+Building the Seneca Housing Platform was more than a project assignment, it was about solving a real issue that international students and expatriates face. We poured our hearts into this project, and we hope it contributes to a more accessible housing market in Ontario. Thanks for checking out our work!
 
