@@ -154,12 +154,13 @@ Our platform is developed using a customized **WordPress** setup with the **Houz
 Here's a breakdown of key folders in this repository:
 ```
 /seneca-housing-platform
-│── public_html/themes/houzez-child            # Custom child theme for Houzez
-│── public_html/themes/houzez-child/template   # Custom template overrides for theme customization
-│── public_html/plugins/                       # Custom plugins handling core functionalities
-│── public_html/wp-includes/assets             # Stores CSS, JS, and images for UI improvements
-│── public_html/wpconfig.php                   # The base configuration for WordPress and Database initialization scripts 
-└── README.md                                  # Project documentation
+│── public_html/themes/houzez-child                   # Custom child theme for Houzez
+│── public_html/themes/houzez-child/template          # Custom template overrides for theme customization
+│── public_html/plugins/                              # Custom plugins handling core functionalities
+│── public_html/plugins/seneca-housing-dependencies   # Custom pluginto handling API Management and additional PHP dependencies
+│── public_html/wp-includes/assets                    # Stores CSS, JS, and images for UI improvements
+│── public_html/wpconfig.php                          # The base configuration for WordPress and Database initialization scripts 
+└── README.md                                         # Project documentation
 ```
 This structure ensures modularity and facilitates future extensions.
 
